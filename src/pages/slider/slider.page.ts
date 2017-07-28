@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { Slides } from 'ionic-angular';
 
 import { SliderService } from './slider.service';
@@ -8,11 +8,18 @@ import { SliderService } from './slider.service';
     templateUrl: 'slider.html',
     providers: [SliderService]
 })
-export class SliderPage {
+export class SliderPage implements OnInit{
     @ViewChild(Slides) slider: Slides;
     public slides: any;
 
     constructor(private sliderService: SliderService) {
+    }
+
+    ngOnInit() {
+        setTimeout(() => {
+            this.slider.autoplay = 4000;
+            this.slider.startAutoplay();
+        },1000);
     }
 
     ionViewWillEnter() {
@@ -21,9 +28,5 @@ export class SliderPage {
                 console.log(slides);
                 this.slides = slides;
             });
-        setTimeout(() => {
-            this.slider.autoplay = 4000;
-            this.slider.startAutoplay();
-        },300);
     }
 }

@@ -1,0 +1,33 @@
+category-page {
+    .homepage-categories {
+        height: 100px;
+    }
+    .category-box {
+        margin: 0 1.2%;
+        width:33.333%;
+        height:120px;
+
+        .category-box-image {
+            height:100px;
+            width:100%;
+            margin: 0 auto;
+            overflow:hidden;
+        }
+
+        .category-box-name {
+            font-size: 0.85em;
+        } 
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        background-size: 10px 17px;
+        background-color: #dfdfdf;
+        top: 40%;
+    }
+    .swiper-button-prev {
+        left: 0;
+    }
+    .swiper-button-next {
+        right: 0;
+    }
+}

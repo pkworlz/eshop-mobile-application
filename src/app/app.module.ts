@@ -9,9 +9,12 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SliderPage } from '../pages/slider/slider.page';
+import { CategoryPage } from '../pages/category/category.page';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { CategoryService } from '../pages/category/category.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    SliderPage
+    SliderPage,
+    CategoryPage
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    CategoryService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
