@@ -40,6 +40,7 @@ export class CategoryPage implements OnInit {
     
   ngOnInit() {
     this.categorySlider.slidesPerView = 'auto';
+    this.categorySlider.freeMode = true;
     this.categorySlider.nextButton = this.nextButton.nativeElement;
     this.categorySlider.prevButton = this.prevButton.nativeElement
     
